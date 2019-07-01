@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Counter extends Component {
+const Counter = (props) => {
 	
-  
-  incrementScore = () => {
+ /*  incrementScore = () => {
     this.setState( prevState => ({
       score: prevState.score + 1
     }));
@@ -13,17 +12,15 @@ class Counter extends Component {
     this.setState( prevState => ({
       score: prevState.score - 1
     }));
-  }
+  } */
 
-  render() {
-    return (
-      <div className="counter">
-        <button className="counter-action decrement"> - </button>
-        <span className="counter-score">{ this.props.score }</span>
-        <button className="counter-action increment"> + </button>
-      </div>
-    );
-  }
+	return (
+		<div className="counter">
+			<button className="counter-action decrement"> - </button>
+			<span className="counter-score">{ props.score }</span>
+			<button className="counter-action increment"> + </button>
+		</div>
+	);
 }
-	
-	export default Counter;
+
+export default Counter;
