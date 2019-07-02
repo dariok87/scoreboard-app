@@ -28,6 +28,13 @@ class App extends Component {
     ]
   };
 
+  handleScoreChange = (delta) => {
+   /*  this.setState( prevState => ({
+      score: prevState.score + 1
+    })); */
+    console.log(delta);
+  }
+
   handleRemovePlayer = (id) => {
     this.setState( prevState => {
       return {
