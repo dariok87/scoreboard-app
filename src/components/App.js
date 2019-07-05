@@ -35,6 +35,18 @@ class App extends Component {
     })); 
   }
 
+  handleAddPlayer = (name) => {
+    this.setState({
+      players: [
+        {
+          name,
+          score: 0,
+          id: ,
+        }
+      ]
+    });
+  }
+
   handleRemovePlayer = (id) => {
     this.setState( prevState => {
       return {
@@ -64,7 +76,7 @@ class App extends Component {
           />
         )}
 
-        <AddPlayerForm />
+        <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
