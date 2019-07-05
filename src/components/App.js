@@ -29,6 +29,9 @@ class App extends Component {
     ]
   };
 
+  // player id counter
+  prevPlayerId = 4;
+
   handleScoreChange = (index, delta) => {
     this.setState( prevState => ({
       score: prevState.players[index].score += delta
@@ -41,7 +44,7 @@ class App extends Component {
         {
           name,
           score: 0,
-          id: ,
+          id: this.prevPlayerId += 1
         }
       ]
     });
