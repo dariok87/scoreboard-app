@@ -5,6 +5,10 @@ class Stopwatch extends Component {
 		isRunning: false
 	};
 
+	tick = () => {
+		
+	}
+
 	handleStopwatch = () => {
 		this.setState({
 			isRunning: !this.state.isRunning
