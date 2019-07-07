@@ -5,8 +5,12 @@ class Stopwatch extends Component {
 		isRunning: false
 	};
 
-	tick = () => {
+	componentDidMount() {
 		
+	}
+
+	tick = () => {
+
 	}
 
 	handleStopwatch = () => {
