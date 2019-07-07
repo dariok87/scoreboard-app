@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 class Stopwatch extends Component {
 
 	state = {
-		isRunning: false
+		isRunning: false,
+		elapsedTime: 0,
+		previousTime: 0
 	};
 
 	componentDidMount() {
@@ -17,6 +19,9 @@ class Stopwatch extends Component {
 		this.setState({
 			isRunning: !this.state.isRunning
 		});
+		if (!this.state.isRunning) {
+			this.setState({ previousTime: Date.now() });
+		}
 	}
 
   render() {
