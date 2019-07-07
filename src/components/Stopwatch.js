@@ -6,11 +6,11 @@ class Stopwatch extends Component {
 	};
 
 	componentDidMount() {
-		
+		this.intervalID = setInterval(() => this.tick(), 1000)
 	}
 
 	tick = () => {
-
+		console.log('ticking');
 	}
 
 	handleStopwatch = () => {
