@@ -14,17 +14,17 @@ class Stopwatch extends Component {
 	tick = () => {
 		if (this.state.isRunning) {
 			const now = Date.now();
-			this.setState({
+			this.setState( prevState => ({
 				previousTime: now,
-				elapsedTime: this.state.elapsedTime + (now - this.state.previousTime)
-			});
+				elapsedTime: prevState.elapsedTime + (now - this.state.previousTime)
+			}));
 		}
 	}
 
 	handleStopwatch = () => {
-		this.setState({
-			isRunning: !this.state.isRunning
-		});
+		this.setState( prevState => ({
+			isRunning: !prevState.isRunning
+		}));
 		if (!this.state.isRunning) {
 			this.setState({ previousTime: Date.now() });
 		}
