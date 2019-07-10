@@ -24,6 +24,7 @@ class AddPlayerForm extends Component {
 			<form onSubmit={this.handleSubmit}>
 				<input 
 					type="text"
+					ref={this.playerInput}
 					value={this.state.value}
 					onChange={this.handleValueChange}
 					placeholder="Enter a player's name"
