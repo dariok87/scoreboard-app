@@ -6,6 +6,8 @@ class AddPlayerForm extends Component {
 		value: ''
 	};
 
+	playerInput = React.createRef();
+
 	handleValueChange = (e) => {
 		this.setState({ value: e.target.value })
 	}
