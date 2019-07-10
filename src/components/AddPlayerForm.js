@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class AddPlayerForm extends Component {
+const AddPlayerForm = ({ addPlayer }) => {
 
-	playerInput = React.createRef();
+	let playerInput = React.createRef();
 
-	handleSubmit = (e) => {
+	let handleSubmit = (e) => {
 		e.preventDefault();
-		this.props.addPlayer(this.playerInput.current.value);
+		addPlayer(playerInput.current.value);
 		e.currentTarget.reset();
 	}
 
-	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={handleSubmit}>
 				<input 
 					type="text"
-					ref={this.playerInput}
+					ref={playerInput}
 					placeholder="Enter a player's name"
 				/>
 
@@ -26,6 +25,6 @@ class AddPlayerForm extends Component {
 			</form>
 		);
 	}
-}
+
 
 export default AddPlayerForm;
