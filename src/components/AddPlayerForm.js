@@ -2,15 +2,7 @@ import React, { Component } from 'react';
 
 class AddPlayerForm extends Component {
 
-	state = {
-		value: ''
-	};
-
 	playerInput = React.createRef();
-
-	handleValueChange = (e) => {
-		this.setState({ value: e.target.value })
-	}
 
 	handleSubmit = (e) => {
 		e.preventDefault();
