@@ -1,20 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AddPlayerForm = ({ addPlayer }) => {
 
-	let playerInput = React.createRef();
+class AddPlayerForm extends Component {
 
-	let handleSubmit = (e) => {
+	staticpropTypes = {
+		addPlayer: PropTypes.func
+	};
+
+	playerInput = React.createRef();
+
+	handleSubmit = (e) => {
 		e.preventDefault();
-		addPlayer(playerInput.current.value);
+		this.props.addPlayer(this.playerInput.current.value);
 		e.currentTarget.reset();
 	}
 
+	render() {
 		return (
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={this.handleSubmit}>
 				<input 
 					type="text"
-					ref={playerInput}
+					ref={this.playerInput}
 					placeholder="Enter a player's name"
 				/>
 
@@ -25,6 +32,8 @@ const AddPlayerForm = ({ addPlayer }) => {
 			</form>
 		);
 	}
+}
+
 
 
 export default AddPlayerForm;
