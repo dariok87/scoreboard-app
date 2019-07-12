@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 
 class AddPlayerForm extends Component {
 
-	staticpropTypes = {
+	static propTypes = {
 		addPlayer: PropTypes.func
 	};
 
