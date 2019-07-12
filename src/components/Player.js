@@ -28,6 +28,8 @@ class Player extends PureComponent{
 			<div className="player">
 				<span className="player-name">
 					<button className="remove-player" onClick={() => removePlayer(id)}>✖</button>
+					
+					<Icon /> // crown icon
 					{ name }
 				</span>
 	
