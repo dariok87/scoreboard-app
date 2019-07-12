@@ -1,7 +1,10 @@
 import React from 'react';
 
 const Icon = (props) => {
-    <svg>...</svg>
-};
+	<svg ... className={ props.isHighScore ? 'is-high-score' : null }>
+		<path ... />
+		<rect ... />
+	</svg>;
+
 
 export default Icon;
